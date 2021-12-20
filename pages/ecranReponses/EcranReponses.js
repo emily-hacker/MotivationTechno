@@ -5,7 +5,8 @@ import image from '../../assets/questionbg.jpg'
 import gif from '../../assets/explosion.gif'
 import bravo from '../../assets/bravo.gif'
 
-// test github
+// test github vs code
+//allo
 
 const EcranReponses = (props) => {
 

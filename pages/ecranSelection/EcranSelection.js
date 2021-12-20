@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, ImageBackground } from 'react-native'
 import BouttonText from '../../components/BouttonText'
 import image from '../../assets/bg.jpg'
 
-
+//allo
 const EcranSelection = (props) => {
     return (
         <View style={styles.container}>
