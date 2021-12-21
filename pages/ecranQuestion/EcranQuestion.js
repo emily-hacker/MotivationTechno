@@ -7,6 +7,7 @@ import Division from "../../components/division/Division"
 import { GameLoop } from "react-native-game-engine"
 import image from "../../assets/questionbg.jpg"
 import explosion from "../../assets/explosion.gif"
+import spacy from "../../assets/spacy.gif"
 
 const { width: WIDTH, height: HEIGHT } = Dimensions.get("window");
 const RADIUS = 25;
@@ -59,7 +60,7 @@ const EcranQuestion = (props) => {
 
 
         <GameLoop style={styles.container} onUpdate={updateHandler}>
-            <Image source={explosion} resizeMode='cover' style={styles.giphyy} />
+            <Image source={spacy} resizeMode='cover' style={styles.giphyy} />
             {choix == 'Addition' && <Addition navigation={props.navigation} route={props.route} prochain={prochain} />}
             {choix == 'Soustraction' && <Soustraction navigation={props.navigation} route={props.route} prochain={prochain} />}
             {choix == 'Multiplication' && <Multiplication navigation={props.navigation} route={props.route} prochain={prochain} />}

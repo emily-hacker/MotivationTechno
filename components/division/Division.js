@@ -20,7 +20,7 @@ const Division = (props) => {
     const [randomListe, setRandomListe] = useState([])
     const calcSomme = () => {
         const tempNombre1 = nbAleatoire(1, 100)
-        const tempNombre2 = nbAleatoire(1, 100)
+        const tempNombre2 = nbAleatoire(1, 10)
         const tempSomme = tempNombre1 / tempNombre2
         const tempNombre3 = nbAleatoire(tempSomme - 10, tempSomme + 10)
         const tempNombre4 = nbAleatoire(tempSomme - 10, tempSomme + 10)
