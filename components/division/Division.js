@@ -8,6 +8,8 @@ const nbAleatoire = (min, max) => {
     return nombre
 }
 
+//hi
+
 const Division = (props) => {
 
 
