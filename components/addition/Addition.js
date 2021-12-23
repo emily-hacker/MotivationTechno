@@ -67,10 +67,10 @@ const Addition = (props) => {
             <Button title='Lecture' onPress={() => verifieReponse(44)} /> */}
             <View style={styles.answerContainer}>
                 {randomListe.map((nombre, idx) => {
-                    return (<TouchableOpacity key={idx} style={styles.buttonContainer} onPress={() => props.navigation.navigate('Reponses', { reponse: nombre, bonneReponse: somme })}>
-                        <LinearGradient style={styles.button} colors={['#9F4580', '#2a4b7c']} >
+                    return (<TouchableOpacity key={idx} style={styles.buttonContainer} onPress={() => props.navigation.navigate('Retour', { reponse: nombre, bonneReponse: somme })}>
+                        <View style={styles.button} >
                             <Text style={styles.texty}>{nombre}</Text>
-                        </LinearGradient>
+                        </View>
                     </TouchableOpacity>)
                 })}
             </View>
@@ -103,6 +103,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderWidth: 1,
         borderRadius: 5,
+        backgroundColor: 'rgba(52, 52, 52, 0.6)'
+
 
 
     },
@@ -130,7 +132,9 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: 40,
         fontWeight: "bold",
-        color: '#b0e0e6'
+        color: '#b0e0e6',
+        top: 40,
+
 
     }
 

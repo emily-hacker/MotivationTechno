@@ -39,16 +39,16 @@ const EcranReponses = (props) => {
             {correcte ? <Image style={styles.gify} source={bravo} /> : <Image style={styles.gify} source={gif} />}
             <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', width: '100%' }}>
                 <TouchableOpacity style={{ width: 100, marginVertical: 5 }} onPress={() => props.navigation.navigate('Retour au Menu', { choix: 'addition', prochain: true })}>
-                    <LinearGradient style={styles.button} colors={['#9F4580', '#2a4b7c']} >
+                    <View style={styles.button} >
                         <Text style={styles.texty}>Prochain</Text>
 
-                    </LinearGradient>
+                    </View>
                 </TouchableOpacity>
                 <TouchableOpacity style={{ width: 100, marginVertical: 5 }} onPress={() => props.navigation.navigate('Retour au Menu', { choix: 'addition', prochain: false })}>
-                    <LinearGradient style={styles.button} colors={['#9F4580', '#2a4b7c']} >
+                    <View style={styles.button} >
                         <Text style={styles.texty}>Reessayer</Text>
 
-                    </LinearGradient>
+                    </View>
                 </TouchableOpacity>
 
 
@@ -82,6 +82,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderWidth: 1,
         borderRadius: 5,
+        backgroundColor: 'rgba(52, 52, 52, 0.6)'
 
 
     },

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { RecyclerViewBackedScrollViewBase, StyleSheet, Text, Button, TouchableOpacity, View } from 'react-native'
+import { RecyclerViewBackedScrollViewBase, StyleSheet, Text, Button, TouchableOpacity, View, Dimensions } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import { sauvegardeDonnee } from '../../utils/asyncStorage'
 
@@ -59,10 +59,10 @@ const Soustraction = (props) => {
             <Button title='Lecture' onPress={() => verifieReponse(44)} /> */}
             <View style={styles.answerContainer}>
                 {randomListe.map((nombre) => {
-                    return (<TouchableOpacity style={styles.buttonContainer} onPress={() => props.navigation.navigate('Reponses', { reponse: nombre, bonneReponse: somme })}>
-                        <LinearGradient style={styles.button} colors={['#9F4580', '#2a4b7c']} >
+                    return (<TouchableOpacity style={styles.buttonContainer} onPress={() => props.navigation.navigate('Retour', { reponse: nombre, bonneReponse: somme })}>
+                        <View style={styles.button} >
                             <Text style={styles.texty}>{nombre}</Text>
-                        </LinearGradient>
+                        </View>
                     </TouchableOpacity>)
                 })}
             </View>
@@ -83,14 +83,30 @@ const styles = StyleSheet.create({
 
     },
 
+    gify: {
+        height: 50,
+        width: 50
+    },
+
     button: {
-        height: 65,
+        height: '100%',
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
         borderWidth: 1,
         borderRadius: 5,
+        backgroundColor: 'rgba(52, 52, 52, 0.6)'
 
+
+
+    },
+
+    ufo: {
+        height: 80,
+        width: 200,
+        position: 'absolute',
+
+        left: 0
 
     },
 
@@ -101,14 +117,16 @@ const styles = StyleSheet.create({
     },
 
     buttonContainer: {
-
+        height: Dimensions.get("screen").height * 0.1,
         width: '33%'
     },
     question: {
         color: 'white',
         fontSize: 40,
         fontWeight: "bold",
-        color: '#b0e0e6'
+        color: '#b0e0e6',
+        top: 40,
+
 
     }
 

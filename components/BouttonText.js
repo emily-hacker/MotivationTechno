@@ -4,9 +4,9 @@ import { LinearGradient } from 'expo-linear-gradient'
 
 const BouttonText = (props) => {
     return (<TouchableOpacity onPress={props.onPress}>
-        <LinearGradient style={styles.button} colors={['#9F4580', '#2a4b7c']}>
+        <View style={styles.button} >
             <Text style={styles.texty}>{props.texte}</Text>
-        </LinearGradient>
+        </View>
 
     </TouchableOpacity>)
 }
@@ -18,7 +18,6 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         justifyContent: 'space-between',
-        borderRadius: 5,
 
     },
 
@@ -28,15 +27,16 @@ const styles = StyleSheet.create({
         width: 250,
         justifyContent: 'center',
         alignItems: 'center',
-        borderWidth: 4,
-        borderRadius: 5,
+        borderWidth: 2,
+        borderRadius: 50,
+        backgroundColor: 'rgba(52, 52, 52, 0.6)'
     },
 
     texty: {
 
         fontSize: 30,
         fontWeight: "bold",
-        color: '#b0e0e6'
+        color: '#b5e0e5'
     },
 })
 

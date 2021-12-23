@@ -9,7 +9,7 @@ const EcranSelection = (props) => {
         <View style={styles.container}>
 
             <ImageBackground source={image} resizeMode="cover" style={styles.image}>
-                <Text style={{ color: '#b0e0e6', fontSize: 30, fontWeight: "bold", position: 'absolute', bottom: 500, left: 30, }}>Choisissez un calcul :</Text>
+                <Text style={{ color: ' rgb(53,51,166) ', fontSize: 30, fontWeight: "bold", position: 'absolute', bottom: 550, left: 30, }}>Choisissez un calcul :</Text>
                 <BouttonText texte='Addition' onPress={() => props.navigation.navigate('Retour au Menu', { choix: 'Addition' })} />
                 <BouttonText texte='Soustraction' onPress={() => props.navigation.navigate('Retour au Menu', { choix: 'Soustraction' })} />
                 <BouttonText texte='Multiplication' onPress={() => props.navigation.navigate('Retour au Menu', { choix: 'Multiplication' })} />

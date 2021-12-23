@@ -20,7 +20,7 @@ function StackNav() {
 
             <Stack.Screen name="Menu Principale" component={EcranSelection} />
             <Stack.Screen name="Retour au Menu" component={EcranQuestion} />
-            <Stack.Screen name="Reponses" component={EcranReponses} />
+            <Stack.Screen name="Retour" component={EcranReponses} />
         </Stack.Navigator>
 
     );
