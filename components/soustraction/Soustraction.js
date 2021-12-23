@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import {
-  RecyclerViewBackedScrollViewBase,
   StyleSheet,
   Text,
   Button,
@@ -8,8 +7,6 @@ import {
   View,
   Dimensions,
 } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
-import { sauvegardeDonnee } from "../../utils/asyncStorage";
 
 const nbAleatoire = (min, max) => {
   const nombre = Math.floor(Math.random() * (max - min + 1) + min);
@@ -40,7 +37,6 @@ const Soustraction = (props) => {
   };
 
   const prochain = props.route.params.prochain;
-  //executer le code chaque fois que [somme] va changer
   useEffect(() => {
     const onFocus = props.navigation.addListener("focus", () => {
       if (prochain) calcSomme();
@@ -63,8 +59,6 @@ const Soustraction = (props) => {
       <Text style={styles.question}>
         {nombre1} - {nombre2} = ?
       </Text>
-      {/* <Button title='Sauvegarde' onPress={() => sauvegardeDonnee({ niveau: 1 }, 'niveau')} />
-            <Button title='Lecture' onPress={() => verifieReponse(44)} /> */}
       <View style={styles.answerContainer}>
         {randomListe.map((nombre, idx) => {
           return (

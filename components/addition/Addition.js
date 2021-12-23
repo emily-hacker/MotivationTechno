@@ -1,17 +1,11 @@
 import React, { useState, useEffect } from "react";
 import {
-  RecyclerViewBackedScrollViewBase,
   StyleSheet,
   Text,
-  Button,
   TouchableOpacity,
   View,
-  Image,
   Dimensions,
 } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
-import { sauvegardeDonnee } from "../../utils/asyncStorage";
-import ufo from "../../assets/alien.png";
 
 const nbAleatoire = (min, max) => {
   const nombre = Math.floor(Math.random() * (max - min + 1) + min);
@@ -64,9 +58,6 @@ const Addition = (props) => {
       <Text style={styles.question}>
         {nombre1} + {nombre2} = ?
       </Text>
-      {/* <Image source={ufo} style={[styles.ufo, { top: top1 }]} /> */}
-      {/* <Button title='Sauvegarde' onPress={() => sauvegardeDonnee({ niveau: 1 }, 'niveau')} />
-            <Button title='Lecture' onPress={() => verifieReponse(44)} /> */}
       <View style={styles.answerContainer}>
         {randomListe.map((nombre, idx) => {
           return (

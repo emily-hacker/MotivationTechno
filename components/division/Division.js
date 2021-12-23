@@ -1,22 +1,16 @@
 import React, { useState, useEffect } from "react";
 import {
-  RecyclerViewBackedScrollViewBase,
   StyleSheet,
   Text,
-  Button,
   TouchableOpacity,
   View,
   Dimensions,
 } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
-import { sauvegardeDonnee } from "../../utils/asyncStorage";
 
 const nbAleatoire = (min, max) => {
   const nombre = Math.floor(Math.random() * (max - min + 1) + min);
   return nombre;
 };
-
-//hello
 
 const Division = (props) => {
   const [somme, setSomme] = useState(undefined);
@@ -44,21 +38,13 @@ const Division = (props) => {
      * après la virgule on re-donne une valeur aux tempNombre et on refait la
      * division! Comme ça on est sûr de pas avoir de nombre comme ça ##.### !
      */
-    console.log("tempNombre1: ", tempNombre1);
-    console.log("tempNombre2: ", tempNombre2);
-    console.log("tempSomme: ", tempSomme);
-    console.log("============================================================");
     while (tempSomme.toString().split(".")[1]?.length > 2) {
       tempNombre1 = nbAleatoire(1, 100);
       tempNombre2 = nbAleatoire(1, 10);
       tempSomme = tempNombre1 / tempNombre2;
     }
-
     let tempNombre3 = nbAleatoire(tempSomme - 10, tempSomme + 10);
     let tempNombre4 = nbAleatoire(tempSomme - 10, tempSomme + 10);
-    console.log("tempNombre1: ", tempNombre1);
-    console.log("tempNombre2: ", tempNombre2);
-    console.log("tempSomme: ", tempSomme);
     setSomme(tempSomme);
     setNombre1(tempNombre1);
     setNombre2(tempNombre2);
@@ -67,7 +53,6 @@ const Division = (props) => {
   };
 
   const prochain = props.route.params.prochain;
-  //executer le code chaque fois que [somme] va changer
   useEffect(() => {
     const onFocus = props.navigation.addListener("focus", () => {
       if (prochain) calcSomme();
@@ -90,8 +75,6 @@ const Division = (props) => {
       <Text style={styles.question}>
         {nombre1} ÷ {nombre2} = ?
       </Text>
-      {/* <Button title='Sauvegarde' onPress={() => sauvegardeDonnee({ niveau: 1 }, 'niveau')} />
-            <Button title='Lecture' onPress={() => verifieReponse(44)} /> */}
       <View style={styles.answerContainer}>
         {randomListe.map((nombre, idx) => {
           return (
