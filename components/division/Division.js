@@ -44,15 +44,21 @@ const Division = (props) => {
      * après la virgule on re-donne une valeur aux tempNombre et on refait la
      * division! Comme ça on est sûr de pas avoir de nombre comme ça ##.### !
      */
-    if (tempSomme.toString().split(".")[1]) {
-      while (tempSomme.toString().split(".")[1].length > 2) {
-        tempNombre1 = nbAleatoire(1, 100);
-        tempNombre2 = nbAleatoire(1, 10);
-        tempSomme = tempNombre1 / tempNombre2;
-      }
+    console.log("tempNombre1: ", tempNombre1);
+    console.log("tempNombre2: ", tempNombre2);
+    console.log("tempSomme: ", tempSomme);
+    console.log("============================================================");
+    while (tempSomme.toString().split(".")[1]?.length > 2) {
+      tempNombre1 = nbAleatoire(1, 100);
+      tempNombre2 = nbAleatoire(1, 10);
+      tempSomme = tempNombre1 / tempNombre2;
     }
+
     let tempNombre3 = nbAleatoire(tempSomme - 10, tempSomme + 10);
     let tempNombre4 = nbAleatoire(tempSomme - 10, tempSomme + 10);
+    console.log("tempNombre1: ", tempNombre1);
+    console.log("tempNombre2: ", tempNombre2);
+    console.log("tempSomme: ", tempSomme);
     setSomme(tempSomme);
     setNombre1(tempNombre1);
     setNombre2(tempNombre2);
