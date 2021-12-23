@@ -51,8 +51,6 @@ const Addition = (props) => {
     return onFocus;
   }, [somme, prochain]);
 
-  const [top1, setTop1] = useState(50);
-
   return (
     <View style={styles.container}>
       <Text style={styles.question}>
