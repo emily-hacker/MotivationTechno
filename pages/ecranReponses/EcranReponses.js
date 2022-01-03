@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   },
 
   texty: {
-    fontSize: 20,
+    fontSize: 17,
     fontWeight: "bold",
     color: "#b0e0e6",
   },
