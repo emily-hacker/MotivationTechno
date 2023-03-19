@@ -9,42 +9,42 @@ const EcranSelection = (props) => {
       <ImageBackground source={image} resizeMode="cover" style={styles.image}>
         <Text
           style={{
-            color: " rgb(53,51,166) ",
+            color: " rgba(80,115,200, 0.6) ",
             fontSize: 30,
             fontWeight: "bold",
             position: "absolute",
             bottom: 550,
-            left: 30,
+            left: 60,
           }}
         >
-          Choisissez un calcul :
+          Choose an option :
         </Text>
         <BouttonText
-          texte="Addition"
+          texte="Meditation"
           onPress={() =>
-            props.navigation.navigate("Retour au Menu", { choix: "Addition" })
+            props.navigation.navigate("Retour au Menu", { choix: "Meditation" })
           }
         />
         <BouttonText
-          texte="Soustraction"
+          texte="Diet"
           onPress={() =>
             props.navigation.navigate("Retour au Menu", {
-              choix: "Soustraction",
+              choix: "Diet",
             })
           }
         />
         <BouttonText
-          texte="Multiplication"
+          texte="Positive Quotes"
           onPress={() =>
             props.navigation.navigate("Retour au Menu", {
-              choix: "Multiplication",
+              choix: "Positive quotes",
             })
           }
         />
         <BouttonText
-          texte="Division"
+          texte="Fitness"
           onPress={() =>
-            props.navigation.navigate("Retour au Menu", { choix: "Division" })
+            props.navigation.navigate("Retour au Menu", { choix: "Fitness" })
           }
         />
       </ImageBackground>

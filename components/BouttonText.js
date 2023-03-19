@@ -18,6 +18,8 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     justifyContent: "space-between",
+    columnGap: 10,
+    margin: 10,
   },
 
   button: {
@@ -25,14 +27,14 @@ const styles = StyleSheet.create({
     width: 250,
     justifyContent: "center",
     alignItems: "center",
-    borderWidth: 2,
+    borderWidth: 1,
     borderRadius: 50,
-    backgroundColor: "rgba(52, 52, 52, 0.6)",
+    backgroundColor: "rgba(79,115,189,0.5)",
   },
 
   texty: {
     fontSize: 30,
     fontWeight: "bold",
-    color: "#b5e0e5",
+    color: "#6689DC",
   },
 });
